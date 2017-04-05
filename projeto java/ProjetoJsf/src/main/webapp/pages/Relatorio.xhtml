@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets" template="Template.xhtml">>
+    
+    <ui:define name="Contedu">
+		<h:form>
+			<p:panel header="Relatorio - Lista">
+				<p:dataTable emptyMessage="Nenhum registro encontrado." id="relatorioSimples"
+					paginator="true" rows="10" value="#{relatorioBean.rela}" var="rela">
+                      
+
+					<f:facet name="header">
+						<p:commandButton value="Pesquisar por Data "
+							oncomplete="PF('dialogo1').show();" />
+					</f:facet>
+					
+					<f:facet name="header">
+            <h:commandLink>
+                <p:graphicImage library="imagens" name="excel.png" width="24"/>
+                <p:dataExporter type="xls" target="relatorioSimples" fileName="relatorioSimples" />
+            </h:commandLink>
+ 
+            <h:commandLink>
+                <p:graphicImage library="imagens" name="pdf.png" width="24"/>
+                <p:dataExporter type="pdf" target="relatorioSimples" fileName="relatorioSimples"/>
+            </h:commandLink>
+ 
+            <h:commandLink>
+                <p:graphicImage library="imagens" name="csv.png"  width="24"/>
+                <p:dataExporter type="csv" target="relatorioSimples" fileName="relatorioSimples" />
+            </h:commandLink>
+ 
+            <h:commandLink>
+                <p:graphicImage library="imagens" name="xml.png"   width="24"/>
+                <p:dataExporter type="xml" target="relatorioSimples" fileName="relatorioSimples" />
+            </h:commandLink>
+        </f:facet>
+
+					<p:column headerText="COD_ESTIPULANTE">
+						<h:outputLabel value="#{rela.COD_ESTIPULANTE}" />
+					</p:column>
+					<p:column headerText="NUM_PROPOSTA">
+						<h:outputLabel value="#{rela.NUM_PROPOSTA}" />
+					</p:column>
+					<p:column headerText="NUM_PARCELA">
+						<h:outputLabel value="#{rela.NUM_PARCELA}" />
+					</p:column>
+					<p:column headerText="DAT_RETORNO_AGENTE">
+						<h:outputLabel value="#{rela.DAT_RETORNO_AGENTE}" />
+					</p:column>
+					<p:column headerText="COD_AGENTE">
+						<h:outputLabel value="#{rela.COD_AGENTE}" />
+					</p:column>
+					<p:column headerText="COD_RETORNO">
+						<h:outputLabel value="#{rela.COD_RETORNO}" />
+					</p:column>
+
+
+				</p:dataTable>
+			</p:panel>
+		</h:form>
+	</ui:define>
+
+</ui:composition>
