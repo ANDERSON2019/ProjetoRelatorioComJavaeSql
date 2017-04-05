@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class fabricaDeConexao {
 	
-	private static final String URL = "jdbc:sqlserver://10.0.0.204:1433;databaseName=SYSEG";
-	private static final String Senha = "CHk2v3";
-	private static final String Login = "db_prod";
+	private static final String URL = "jdbc:sqlserver://xxxxxx:xxxxxx;databaseName=xxxxxx";
+	private static final String Senha = "xxxxxx";
+	private static final String Login = "xxxxxxx";
 
 
 	public static Connection Conectar() throws SQLException {
