@@ -11,7 +11,7 @@ public class RelatorioDao {
 	
 	public ArrayList<relatorioDomain> lista() throws SQLException {
 		
-		CallableStatement sql = fabricaDeConexao.Conectar().prepareCall("{call SYSEG.dbo.BuscaRelatorioBit}");
+		CallableStatement sql = fabricaDeConexao.Conectar().prepareCall("{call.dbo.BuscaRelatorio}");
 		
 		ResultSet resultado = sql.executeQuery();
 		ArrayList<relatorioDomain> lista = new ArrayList<>();
