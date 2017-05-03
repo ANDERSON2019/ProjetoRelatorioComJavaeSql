@@ -16,6 +16,10 @@ public class fabricaDeConexao {
 	public static Connection Conectar() throws SQLException {
 		DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
 		Connection connection = DriverManager.getConnection(URL, Login, Senha);
+		
+		
 		return connection;
+		
+	
 	}
 }
