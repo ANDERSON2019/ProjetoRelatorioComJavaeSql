@@ -32,6 +32,10 @@ public class RelatorioBean {
 			try {
 				RelatorioDao rl = new RelatorioDao();
 				rela = rl.lista();
+				foreach (relatorio relatorio : lista) {
+					
+				system.out.printli(relatorio);	
+				}
 				
 			} catch (SQLException e) {
 				
