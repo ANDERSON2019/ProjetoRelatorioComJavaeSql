@@ -27,7 +27,7 @@ public class RelatorioDao {
 		rl.setCOD_RETORNO(resultado.getString("COD_RETORNO"));
 		
 	    lista.add(rl);
-	    // teste
+	    // teste dsdsad
 	    
 	     }
 		
