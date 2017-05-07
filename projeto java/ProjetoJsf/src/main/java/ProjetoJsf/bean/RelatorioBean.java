@@ -10,7 +10,7 @@ import javax.faces.model.ListDataModel;
 import ProjetoJsf.dao.RelatorioDao;
 import ProjetoJsf.doman.relatorioDomain;
 
-
+// teste
 @ViewScoped
 @ManagedBean
 public class RelatorioBean {
