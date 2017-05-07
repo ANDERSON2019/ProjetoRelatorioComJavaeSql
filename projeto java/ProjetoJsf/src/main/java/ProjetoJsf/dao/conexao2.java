@@ -8,6 +8,11 @@ public class fabricaDeConexao {
 	
 	// teste 2 tetette sasa
 	
+	
+	// novo teste pelo git basch
+	
+	
+	
 	private static final String URL = "jdbc:sqlserver://xxxxxx:xxxxxx;databaseName=xxxxxx";
 	private static final String Senha = "xxxxxx";
 	private static final String Login = "xxxxxxx";
